@@ -1,9 +1,11 @@
-Student_Name: Ofir Shmofir
-Username: OfirShm
-Password: 1q2w3e4r
-Year: 1
-Student_Name: AlexTa
-Username: AlexTati
-Password: 1q2w3e4r
+Student_Name: Alex
+Username: Alexta
+Password: 1234
 Year: 3
+
+Tutor_Name: Shulamit
+Username: Karatist2000
+Password: 4214
+Teaching Subject: Tora
+
 
