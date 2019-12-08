@@ -1,3 +1,4 @@
+from random import randint
 from Question import Question
 from Exam import Exam
 from Student import Student
@@ -5,26 +6,60 @@ from Staff import Staff
 
 
 def add_question():
+    def idcheck():
+        i = 0
+        while i == 0:
+            id = randint(10000, 99999)
+            with open("QuestionBank.txt") as g:
+                if str(id) in g.read():
+                    pass
+                else:
+                    i = 1
+                    return id
+    f = open("QuestionBank.txt", "a")
+    myid = str(idcheck())
+    f.write("ID: " + myid + " ")
     subName = input("Enter Question Subject:")
+    f.write("Subject: " + subName + " ")
     scndsubName = input("Enter Question Sub-Subject:")
+    f.write("Secondary Subject: " + scndsubName + " ")
     fformat = input("Enter the Fomat(PDF or Word):")
     QuestionFile = input("Enter Question File:")  # entering the file PDF or Word
     solFile = input("Enter Solution File:")  # entering the file PDF or Word
     solType = input("Enter the Solution Type(Full,Partial,Final):")
     difficulty = input("Enter The Difficulty of the Question:")
     exam = input("Enter the Exam semester it was taken from:")
-    newQuestion = Question(subName, scndsubName, fformat, QuestionFile, solFile, solType, difficulty, exam)
+    f.write("Semester: " + exam + "\n\r")
+    newQuestion = Question(myid, subName, scndsubName, fformat, QuestionFile, solFile, solType, difficulty, exam)
+    f.close()
     return newQuestion
 
 
 def add_exam():
+    def idcheck():
+        i = 0
+        while i == 0:
+            id = randint(10000, 99999)
+            with open("QuestionBank.txt") as g:
+                if str(id) in g.read():
+                    pass
+                else:
+                    i = 1
+                    return id
+
+    f = open("ExamBank.txt", "a")
+    myid = str(idcheck())
+    f.write("ID: " + myid + " ")
     semester = input("Enter the Semester:")
     subName = input("Enter Exam Subject:")
     fformat = input("Enter the Fomat(PDF or Word):")
     examFile = input("Enter Exam File:")  # entering the file PDF or Word
     solFile = input("Enter Solution File:")  # entering the file PDF or Word
     solType = input("Enter the Solution Type(Full,Partial,Final):")
-    newExam = Exam(semester, solFile, examFile, fformat, subName, solType)
+    f.write("Subject: " + subName + " ")
+    f.write("Semester: " + semester + " ")
+    newExam = Exam(myid, semester, solFile, examFile, fformat, subName, solType)
+    f.close()
     return newExam
 
 
@@ -110,3 +145,15 @@ def Login():
             return 2
         else:
             return 3
+
+
+def Search():
+    KeyWord = input("Search: ")
+    with open("QuestionBank.txt") as f:
+        for line in f:
+            if KeyWord in line:
+                return 'yes'
+            else:
+                return 'no'
+
+

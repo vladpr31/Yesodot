@@ -1,5 +1,6 @@
 class Question:
-    def __init__(self, subName, scndSubName, QuestionFile, solFile, fformat, solType, difficulty, exam):
+    def __init__(self, id, subName, scndSubName, QuestionFile, solFile, fformat, solType, difficulty, exam):
+        self.id = id
         self.subName = subName
         self.scndSubName = scndSubName
         self.QuestionFile = QuestionFile
