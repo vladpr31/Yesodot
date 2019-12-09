@@ -1,32 +1,4 @@
-Student_Name: Alex
-Username: Alexta
-Password: 1234
-Year: 3
-
-Tutor_Name: Shulamit
-Username: Karatist2000
-Password: 4214
-Teaching Subject: Tora
-
-Student_Name: Alex
-Username: yesyes
-Password: 1242
-Year: 2
-
-Student_Name: mishu
-Username: Alexta
-Password: 24
-Year: 1
-
-Student_Name: alex
-Username: yesyesno
-Password: 4
-Year: 2
-
 Student_Name: alex Username: yes Password: 1234 Year: 2
-Student_Name: Vlad Username: saf Password: sf Year: 2
-Student_Name: John Clearance: 1 Username: John1 Password: 1234 Year: 2
-Tutor_Name: God Clearance: 3 Username: God3 Password: 445 Teaching Subject: dg
-Student_Name: Vlados Clearance: 1 Username: vladi3 Password: 1q2w3e4r Year: 3
 Tutor_Name: Vlad Clearance: 3 Username: Vlad1 Password: 1234 Teaching Subject: sport
+Student_Name: ks Clearance: 1 Username: ofir Password: 1234 Year: 2
 

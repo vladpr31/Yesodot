@@ -3,7 +3,7 @@ from Question import Question
 from Exam import Exam
 from Student import Student
 from Staff import Staff
-
+import sys
 
 def add_question():
     def idcheck():
@@ -20,19 +20,19 @@ def add_question():
     myid = str(idcheck())
     subName = input("Enter Question Subject:")
     f.write("Subject: " + subName + " ")
-    scndsubName = input("Enter Question Sub-Subject:")
-    f.write("Secondary Subject: " + scndsubName + " ")
+    amount = int(input("How many paragraphs in the question?"))
+    for i in range(amount):
+        scndsubName = input("Enter paragraph subject #"+str(i+1)+":")
+        f.write("Sub-Subject(" + str(i+1) +"):" + scndsubName + ", Difficulty: # ")
     fformat = input("Enter the Fomat(PDF or Word):")
     QuestionFile = input("Enter Question File:")  # entering the file PDF or Word
     solFile = input("Enter Solution File:")  # entering the file PDF or Word
     solType = input("Enter the Solution Type(Full,Partial,Final):")
     exam = input("Enter the Exam semester it was taken from:")
     f.write("Semester: " + exam + " ")
-    f.write("Solution type: " + solType + " ")
-    difficulty = input("Enter The Difficulty of the Question(1-5):")
-    f.write("Difficulty: " + difficulty + "\n\r")
+    f.write("Solution type: " + solType + "\n\r")
     f.write("ID: " + myid + "\n\r")
-    newQuestion = Question(myid, subName, scndsubName, fformat, QuestionFile, solFile, solType, difficulty, exam)
+    newQuestion = Question(myid, subName, fformat, QuestionFile, solFile, solType, exam)
     f.close()
     return newQuestion
 
@@ -198,3 +198,15 @@ def Ticket():
 def ViewTickets():
     with open("Ticket.txt", 'r') as f:
         return f.read()
+
+
+def Difficulty():
+    myid = input("Enter question ID:")
+    par = input("Enter question paragraph")
+    newdif = input("Enter Difficulty:")
+    with open("QuestionBank.txt") as f:
+        for line in f:
+            if myid in line:
+                line = line.replace("Sub-Subject("+par+"): Difficulty: #", "Sub-Subject("+par+"): Difficulty: "+newdif+"")
+                
+    print("Difficulty updated!\n\r")
