@@ -19,8 +19,10 @@ if Myclearance == 1 or Myclearance == 2:
 elif Myclearance == 3:
     option = input("(1) Search\n\r(2) add exam\n\r(3) add question")
     if option == '1':
-         print(Search())
+        print(Search())
     elif option == '2':
-       ExamDataBase.append(add_exam())
+        ExamDataBase.append(add_exam())
     elif option == '3':
-       QuestionDataBase.append(add_question())
+        QuestionDataBase.append(add_question())
+
+# 190594

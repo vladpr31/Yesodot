@@ -28,4 +28,5 @@ Student_Name: Alex
 Student_Name: John Clearance: 1 Username: John1 Password: 1234 Year: 2
 Tutor_Name: God Clearance: 3 Username: God3 Password: 445 Teaching Subject: dg
 Student_Name: Vlados Clearance: 1 Username: vladi3 Password: 1q2w3e4r Year: 3
+Tutor_Name: Vlad Clearance: 3 Username: Vlad1 Password: 1234 Teaching Subject: sport
 

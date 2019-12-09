@@ -18,7 +18,6 @@ def add_question():
                     return id
     f = open("QuestionBank.txt", "a")
     myid = str(idcheck())
-    f.write("ID: " + myid + " ")
     subName = input("Enter Question Subject:")
     f.write("Subject: " + subName + " ")
     scndsubName = input("Enter Question Sub-Subject:")
@@ -27,9 +26,12 @@ def add_question():
     QuestionFile = input("Enter Question File:")  # entering the file PDF or Word
     solFile = input("Enter Solution File:")  # entering the file PDF or Word
     solType = input("Enter the Solution Type(Full,Partial,Final):")
-    difficulty = input("Enter The Difficulty of the Question:")
     exam = input("Enter the Exam semester it was taken from:")
-    f.write("Semester: " + exam + "\n\r")
+    f.write("Semester: " + exam + " ")
+    f.write("Solution type: " + solType + " ")
+    difficulty = input("Enter The Difficulty of the Question(1-5):")
+    f.write("Difficulty: " + difficulty + "\n\r")
+    f.write("ID: " + myid + "\n\r")
     newQuestion = Question(myid, subName, scndsubName, fformat, QuestionFile, solFile, solType, difficulty, exam)
     f.close()
     return newQuestion
@@ -148,12 +150,12 @@ def Login():
 
 
 def Search():
-    KeyWord = input("Search: ")
-    with open("QuestionBank.txt") as f:
-        for line in f:
-            if KeyWord in line:
-                return 'yes'
-            else:
-                return 'no'
-
-
+        KeyWord = input("Search: ")
+        newstr = ''
+        with open("QuestionBank.txt") as f:
+            for line in f:
+                if KeyWord in line:
+                    mystr = f.readline(9)
+                    print(mystr)
+                    newstr = newstr + mystr + "\n"
+        return newstr
