@@ -150,12 +150,51 @@ def Login():
 
 
 def Search():
+    option = input("(1) Free search:\n\r(2) Search with options\n\r")
+    if option == '1':
         KeyWord = input("Search: ")
+        f = open("History.txt", "a")
+        f.write(KeyWord + "\n\r")
+        f.close()
         newstr = ''
         with open("QuestionBank.txt") as f:
             for line in f:
                 if KeyWord in line:
                     mystr = f.readline(9)
-                    print(mystr)
                     newstr = newstr + mystr + "\n"
         return newstr
+    elif option == '2':
+        KeyWord = input("Search: ")
+        f = open("History.txt", "a")
+        f.write(KeyWord + "\n\r")
+        f.close()
+        KeyWord1 = input("Difficulty(1-5): ")
+        KeyWord2 = input("Solution type(Full, Partial, Final): ")
+        newstr = ''
+        with open("QuestionBank.txt") as f:
+            for line in f:
+                if KeyWord and KeyWord1 and KeyWord2 in line:
+                    mystr = f.readline(9)
+                    newstr = newstr + mystr + "\n"
+        return newstr
+
+
+def OpenTicket():
+    pass
+
+
+def History():
+    with open("History.txt", 'r') as f:
+        return f.read()
+
+
+def Ticket():
+    f = open("Ticket.txt", "a")
+    Mytext = input("Enter your text here:\n\r")
+    f.write(Mytext + "\n\r")
+    f.close()
+
+
+def ViewTickets():
+    with open("Ticket.txt", 'r') as f:
+        return f.read()

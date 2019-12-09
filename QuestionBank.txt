@@ -1,11 +1,10 @@
 Subject: lol Secondary Subject: jungle Semester: 2019a Solution type: Full Difficulty: 1
-ID: 10001
-Subject: lol Secondary Subject: mid Semester: 2019a Solution type: Full Difficulty: 2
-ID: 10002
-Subject: lol Secondary Subject: top Semester: 2019a Solution type: Partial Difficulty: 3
-ID: 10003
-Subject: lol Secondary Subject: adc Semester: 2019a Solution type: Final Difficulty: 4
-ID: 10004
-Subject: lol Secondary Subject: jungle Semester: 2019a Solution type: Final Difficulty: 5
-ID: 10005
-
+ID: 10001
+Subject: lol Secondary Subject: mid Semester: 2019a Solution type: Full Difficulty: 2
+ID: 10002
+Subject: lol Secondary Subject: top Semester: 2019a Solution type: Partial Difficulty: 3
+ID: 10003
+Subject: lol Secondary Subject: adc Semester: 2019a Solution type: Final Difficulty: 4
+ID: 10004
+Subject: lol Secondary Subject: jungle Semester: 2019a Solution type: Final Difficulty: 5
+ID: 10005

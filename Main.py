@@ -3,6 +3,10 @@ from Functions import Login
 from Functions import add_exam
 from Functions import add_question
 from Functions import Search
+from Functions import History
+from Functions import Ticket
+from Functions import ViewTickets
+
 PersonDataBase = []
 ExamDataBase = []
 QuestionDataBase = []
@@ -17,12 +21,17 @@ else:
 if Myclearance == 1 or Myclearance == 2:
     print(Search())
 elif Myclearance == 3:
-    option = input("(1) Search\n\r(2) add exam\n\r(3) add question")
+    option = input("(1) Search\n\r(2) add exam\n\r(3) add question\n\r(4) Search History\n\r(5) Open ticket\n\r(6) "
+                   "View tickets")
     if option == '1':
         print(Search())
     elif option == '2':
         ExamDataBase.append(add_exam())
     elif option == '3':
         QuestionDataBase.append(add_question())
-
-# 190594
+    elif option == '4':
+        print(History())
+    elif option == '5':
+        Ticket()
+    elif option == '6':
+        print(ViewTickets())
